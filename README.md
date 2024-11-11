@@ -1,7 +1,7 @@
 # 2019 MLB Batting Cluster
 
 ## Overview
-This Code Rpository contains a Python script that when run produces a five (5) cluster classification containing daily batters within the major leagues. The clusters are the result of 2 sequential k-means Clustering algorithms.
+This Code Repository contains a Python script that when run produces a five (5) cluster classification containing daily batters within the major leagues. The clusters are the result of 2 sequential k-means Clustering algorithms.
 
 ## Data Source
 Batting data was taken from the website Baseball Reference: 
