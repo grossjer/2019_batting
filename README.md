@@ -22,10 +22,10 @@ The methodology can be described in seven (7) distinct sequential phases:
 ## Outputs
 From this data, different clusters can be retrieved and then analyzed for different purposes.
 The output contains: 
-	*	Two (2) plots:
-  	*	everday_clusters.png displays a two-dimensional projection of the final clustering of each player
-  	*	everyday_stats.png displays offensive data stats of batting average, home runs and games played with each point color coded for the cluster to which and belongs
-	*	An excel spreadsheet with statistics for each player as well as cluster designations, denoted in the final two (2) columns as “Cluster” and “Cluster2”.
+*	Two (2) plots:
+*		everday_clusters.png displays a two-dimensional projection of the final clustering of each player
+*		everyday_stats.png displays offensive data stats of batting average, home runs and games played with each point color coded for the cluster to which and belongs
+*	An excel spreadsheet with statistics for each player as well as cluster designations, denoted in the final two (2) columns as “Cluster” and “Cluster2”.
 
 ## How to run
 To run, place both the Python script and the **batting_stats_2019.xlsx** Excel file into the same directory and execute the example Python code file named **JeremyGross_ExampleCode.py**.
