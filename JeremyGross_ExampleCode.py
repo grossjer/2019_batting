@@ -16,7 +16,6 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D  # noqa: F401 unused import
-import pickle
 
 
 # ## Below is data manipulation and structuring to return a dataframe that contains all relevant information of all players who spent the entire season with only one team
@@ -137,8 +136,9 @@ fig.tight_layout()
 
 ax.set_xlabel('Games')
 ax.set_ylabel('Batting Average')
+ax.set_zlabel('HR',rotation=270,labelpad=-5)
 ax.yaxis.set_major_formatter(FormatStrFormatter('%.3f'))
-ax.set_zlabel('HR')
+# ax.set_box_aspect(None, zoom=0.95)
 ax.set_title('Games and Average Production for 2019 MLB Season')
 ax.text2D(0.2, 0.97, "Similarly Colored Data Points Belong to Same Cluster", transform=ax.transAxes)
 
