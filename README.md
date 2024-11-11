@@ -23,7 +23,7 @@ The methodology can be described in seven (7) distinct sequential phases:
 From this data, different clusters can be retrieved and then analyzed for different purposes.
 The output contains: 
 *	Two (2) plots:
-    *	everday_clusters.png displays a two-dimensional projection of the final clustering of each player
+    *	everday_clusters.png displays a two-dimensional projection of the final clustering of each player based on Principal Components
     *	everyday_stats.png displays offensive data stats of batting average, home runs and games played with each point color coded for the cluster to which and belongs
 *	An excel spreadsheet with statistics for each player as well as cluster designations, denoted in the final two (2) columns as “Cluster” and “Cluster2”.
 
