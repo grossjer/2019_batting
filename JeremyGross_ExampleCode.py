@@ -73,8 +73,8 @@ full_player_name_stats = pd.merge(left=stats_df[['Name','Tm','Lg','Pos\xa0Summar
 #(players) belong to which clusters (be it All-stars, everday or undervalued...)
 full_time_player_clusters = cluster_centers_df[cluster_centers_df['G']>81].index
 
-
-full_time_players = filtered_stats_df[filtered_stats_df['Cluster'].isin(full_time_player_clusters)]
+# Creating a copy of the slice of tthe filtered stats dataframe for future use
+full_time_players = filtered_stats_df[filtered_stats_df['Cluster'].isin(full_time_player_clusters)].copy()
 
 #Creating an array based on dataframe
 player_stats_array = full_time_players.values
@@ -82,7 +82,7 @@ player_stats_array = full_time_players.values
 #Creating principal components for the second round of clustering and eventual graph
 pca = PCA(n_components=3)
 principalComponents = pca.fit_transform(player_stats_array)
-principalDf = pd.DataFrame(data = principalComponents
+principalDf_daily = pd.DataFrame(data = principalComponents
              , columns = ['principal component 1', 'principal component 2','principal component 3'])
 
 
@@ -92,19 +92,19 @@ clf = KMeans(n_clusters=5)
 clf.fit(stats_array)
 y_predict = clf.fit_predict(player_stats_array)
 full_time_players['Cluster2'] = y_predict
-principalDf['Cluster'] = y_predict
+principalDf_daily['Cluster'] = y_predict
 
 
 # 2-D Plot of Day-to-day player data based on principal components
 colors=["#0000FF", "#00FF00", "#FF0066","purple","orange"]
 # blue, green, pink, purple, orange
 
-x = principalDf['principal component 1'].values
-y = principalDf['principal component 2'].values
+x = principalDf_daily['principal component 1'].values
+y = principalDf_daily['principal component 2'].values
 
 #Assigning each point relative to the cluster it belongs
 for i in range(len(x)):
-    color_index = principalDf['Cluster'].loc[i]
+    color_index = principalDf_daily['Cluster'].loc[i]
     plt.scatter(x[i], y[i], color=colors[color_index])
 plt.xlabel('Princpal Component 1')
 plt.ylabel('Princpal Component 2')
