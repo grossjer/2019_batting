@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # coding: utf-8
 
 # # Using Machine Learning to find MLB Players Who were Underutilized in 2019  

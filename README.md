@@ -28,8 +28,7 @@ The output contains:
 *	An excel spreadsheet with statistics for each player as well as cluster designations, denoted in the final two (2) columns as “Cluster” and “Cluster2”.
 
 ## How to run
-To run, place both the Python script and the **batting_stats_2019.xlsx** Excel file into the same directory and execute the example Python code file named **JeremyGross_ExampleCode.py**.
+To run, place both the Python script and the **batting_stats_2019.xlsx** Excel file into the same directory and execute the example Python code file named **batting_stats.py**.
 
 ## Jupyter Notebook
 All of the code and outputs can be seen using the **JeremyGross_ExampleCode.html**. This HTML file contains the output from running the code in a Jupyter notebook.
-
