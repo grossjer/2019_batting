@@ -86,7 +86,6 @@ principalDf_daily = pd.DataFrame(data = principalComponents
 
 
 #Clustering based on the data from daily hitters
-# This returns a warning. I am aware. However, the alternative will return a "null value"
 clf = KMeans(n_clusters=5)
 clf.fit(stats_array)
 y_predict = clf.fit_predict(player_stats_array)
